@@ -1,22 +1,21 @@
 import math
 import random
 import turtle
-from turtle_run import * #引入我們自訂的 config.py
+from turtle_run import * #引入自訂的 config.py
 
-# 設定畫布大小為 500 x 500
+# 設定畫布
 win_length = 500
 win_height = 500
 
-#設定有八隻烏龜
+
 turtles = 8
 
-#創建新畫布
 turtle.screensize(win_length, win_height)
 
 #宣告config class
 config = Config()
 
-# 宣告比賽烏龜的型別，有位置、顏色、形狀、名稱等等的參數
+#宣告烏龜
 class racer(object):
     def __init__(self, color, pos, name):
         self.pos = pos
@@ -29,14 +28,14 @@ class racer(object):
         self.turt.setheading(90)
         self.name = name
         
-    #定義賽龜的運動行為，透過 pos + r 來前進
+    #定義賽龜的運動行為
     def move(self):
         r = random.randrange(1, 30)
         self.pos = (self.pos[0], self.pos[1] + r)
         self.turt.pendown()
         self.turt.forward(r)
         
-    #讓賽龜們回到初始位置
+    #回到初始位置
     def reset(self):
         self.turt.penup()
         self.turt.setpos(self.pos)
@@ -81,7 +80,7 @@ def startGame():
                 print(win) 
                 ShowWinText= win
 
-    #再宣告一隻烏龜用來顯示結果
+    #宣告一隻烏龜用來顯示結果
     pen = turtle.Turtle()
     pen.penup()
     pen.goto(0,-270)
