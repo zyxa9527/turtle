@@ -2,8 +2,10 @@
  
 這是一個烏龜賽跑抽籤的遊戲
 
-可以在turtle_run.py裡改成自己要的項目
 
+
+
+可以在turtle_run.py裡改成自己要的項目
 另外可以用PyInstaller打包成exe檔
 
 參考文章
